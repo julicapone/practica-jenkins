@@ -18,4 +18,8 @@ pipeline {
             }
         }
     }
+    
+    tools {
+        maven "maven-nodo-principal"
+    }
 }
