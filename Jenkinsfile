@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir (‘maven-adderapp’) {
+                dir (‘practicaORM’) {
                     sh 'mvn -DskipTests clean package'
                 }
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing... :S'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying.... :D'
             }
         }
     }
