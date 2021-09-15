@@ -27,7 +27,7 @@ pipeline {
     
     post {
         success {
-            dir (‘maven-adderapp’) {
+            dir (‘practicaORM’) {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint:true
             }
         }
