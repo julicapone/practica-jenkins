@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir (‘practicaORM’) {
+                dir (‘practicaJenkins’) {
                     sh 'mvn -DskipTests clean package'
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
     
     post {
         success {
-            dir (‘practicaORM’) {
+            dir (‘practicaJenkis’) {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint:true
             }
         }
