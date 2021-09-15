@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir (‘practicaJenkins’) {
+                dir (‘mesas’) {
                     sh 'mvn -DskipTests clean package'
                 }
             }
@@ -27,7 +27,7 @@ pipeline {
     
     post {
         success {
-            dir (‘practicaJenkis’) {
+            dir (‘mesas’) {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint:true
             }
         }
