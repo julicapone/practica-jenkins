@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    tools {
+        maven "maven-nodo-principal"
+    }
 
     stages {
         stage('Build') {
@@ -19,10 +23,6 @@ pipeline {
                 echo 'Deploying.... :D'
             }
         }
-    }
-    
-    tools {
-        maven "maven-nodo-principal"
     }
     
     post {
